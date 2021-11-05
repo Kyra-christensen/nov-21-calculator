@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, sub } from '../math-utils.js';
+import { add, sub, multi, divi } from '../math-utils.js';
 
 // import { example } from '../example.js';
 
@@ -23,5 +23,17 @@ test('add() should take in 1 and 1 and return 2', (expect) => {
 test('sub() should take in 2 and 1 and return 1', (expect) => {
     const expected = 1;
     const actual = sub(2, 1);
+    expect.equal(actual, expected);
+});
+
+test('multi() should take in 2 and 2 and return 4', (expect) => {
+    const expected = 4;
+    const actual = multi(2, 2);
+    expect.equal(actual, expected);
+});
+
+test('divi() should take in 10 and 5 and return 2', (expect) => {
+    const expected = 2;
+    const actual = divi(10, 5);
     expect.equal(actual, expected);
 });
