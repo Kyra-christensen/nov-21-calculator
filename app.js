@@ -27,6 +27,11 @@ const diviNumber2 = document.getElementById('divi-number-2');
 const diviButton = document.getElementById('divi-button');
 const diviAnswer = document.getElementById('divi-answer');
 
+let addButtonClick = 1;
+let subButtonClick = 1;
+let multiButtonClick = 1;
+let diviButtonClick = 1;
+
 // set event listeners 
   // get user input
   // use user input to update state 
@@ -37,6 +42,8 @@ addButton.addEventListener('click', () => {
     const num2 = +addNumber2.value;
     const sum = add(num1, num2);
     addAnswer.textContent = sum;
+    console.log('You clicked the addition button', + addButtonClick, 'time(s)'); 
+    addButtonClick++;
 });
 
 subButton.addEventListener('click', () => {
@@ -44,6 +51,8 @@ subButton.addEventListener('click', () => {
     const num2 = +subNumber2.value;
     const sum = sub(num1, num2);
     subAnswer.textContent = sum;
+    console.log('You clicked the subtraction button', + subButtonClick, 'time(s)'); 
+    subButtonClick++;
 });
 
 multiButton.addEventListener('click', () => {
@@ -51,6 +60,8 @@ multiButton.addEventListener('click', () => {
     const num2 = +multiNumber2.value;
     const sum = multi(num1, num2);
     multiAnswer.textContent = sum;
+    console.log('You clicked the multiplication button', + multiButtonClick, 'time(s)'); 
+    multiButtonClick++;
 });
 
 diviButton.addEventListener('click', () => {
@@ -58,4 +69,6 @@ diviButton.addEventListener('click', () => {
     const num2 = +diviNumber2.value;
     const sum = divi(num1, num2);
     diviAnswer.textContent = sum;
+    console.log('You clicked the division button', + diviButtonClick, 'time(s)'); 
+    diviButtonClick++;
 });
