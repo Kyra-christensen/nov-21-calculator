@@ -1,8 +1,12 @@
 // import functions and grab DOM elements
+
 import { add } from './math-utils.js';
 import { sub } from './math-utils.js';
 import { multi } from './math-utils.js';
+import { divi } from './math-utils.js';
+
 // initialize state
+
 const addNumber1 = document.getElementById('add-number-1');
 const addNumber2 = document.getElementById('add-number-2');
 const addButton = document.getElementById('add-button');
@@ -18,10 +22,16 @@ const multiNumber2 = document.getElementById('multi-number-2');
 const multiButton = document.getElementById('multi-button');
 const multiAnswer = document.getElementById('multi-answer');
 
+const diviNumber1 = document.getElementById('divi-number-1');
+const diviNumber2 = document.getElementById('divi-number-2');
+const diviButton = document.getElementById('divi-button');
+const diviAnswer = document.getElementById('divi-answer');
+
 // set event listeners 
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+
 addButton.addEventListener('click', () => {
     const num1 = +addNumber1.value;
     const num2 = +addNumber2.value;
@@ -41,4 +51,11 @@ multiButton.addEventListener('click', () => {
     const num2 = +multiNumber2.value;
     const sum = multi(num1, num2);
     multiAnswer.textContent = sum;
+});
+
+diviButton.addEventListener('click', () => {
+    const num1 = +diviNumber1.value;
+    const num2 = +diviNumber2.value;
+    const sum = divi(num1, num2);
+    diviAnswer.textContent = sum;
 });
